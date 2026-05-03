@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" data-root="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | Shri Gurukrupa Builders – Featured Projects in Nagpur, Umred &amp; Vidarbha</title>
+  <meta name="description" content="Explore featured projects by Shri Gurukrupa Builders across Nagpur, Umred, and Vidarbha — MTDC works, government buildings, parks, land development, and civil infrastructure." />
+  <meta name="keywords" content="builders projects Nagpur, construction projects Nagpur, government projects Vidarbha, MTDC projects Nagpur, parks and gardens Umred, land development Umred, civil infrastructure Nagpur" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.gurukrupabuilders.in/portfolio.html" />
+  <meta name="geo.region" content="IN-MH" />
+  <meta name="geo.placename" content="Nagpur, Maharashtra" />
+  <meta name="geo.position" content="21.1458;79.0882" />
+  <meta property="og:title" content="Projects Portfolio | Shri Gurukrupa Builders Nagpur" />
+  <meta property="og:description" content="180+ projects in Nagpur, Umred & Vidarbha. Government contracts, residential townships, commercial spaces & infrastructure." />
+  <meta property="og:url" content="https://www.gurukrupabuilders.in/portfolio.html" />
+  <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"CollectionPage",
+    "name":"Portfolio – Shri Gurukrupa Builders Nagpur",
+    "url":"https://www.gurukrupabuilders.in/portfolio.html",
+    "description":"Featured projects across Nagpur, Umred, and Vidarbha including MTDC works, government buildings, parks, land development, and civil infrastructure.",
+    "publisher":{"@type":"Organization","name":"Shri Gurukrupa Builders","url":"https://www.gurukrupabuilders.in/"},
+    "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.gurukrupabuilders.in/"},{"@type":"ListItem","position":2,"name":"Portfolio","item":"https://www.gurukrupabuilders.in/portfolio.html"}]}
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/main.css?v=2" />
+  <style>
+    .filter-bar { display:flex; gap:0.5rem; flex-wrap:wrap; margin:2.5rem 0 0; }
+    .filter-btn { padding:0.5rem 1.25rem; border:1px solid var(--border); background:transparent; color:var(--text-muted); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; border-radius:100px; cursor:pointer; transition:all 0.3s; font-family:inherit; }
+    .filter-btn.active, .filter-btn:hover { border-color:var(--gold); color:var(--gold); background:rgba(201,168,76,0.08); }
+
+    .portfolio-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:1.25rem; margin-top:2.5rem; }
+    .portfolio-card { position:relative; overflow:hidden; border-radius:var(--radius); cursor:pointer; border:1px solid var(--border); transition:all 0.4s; transform-style:preserve-3d; aspect-ratio:1; }
+    .portfolio-card.c-wide { grid-column:span 2; aspect-ratio:16/9; }
+    .portfolio-card.c-tall { aspect-ratio:3/4; }
+    .portfolio-card.c-sq   { aspect-ratio:1; }
+    .portfolio-card.pf-hidden { display:none; }
+    .portfolio-card:hover { border-color:var(--gold); box-shadow:0 20px 60px rgba(0,0,0,0.5); }
+    .card-bg { position:absolute; inset:0; transition:transform 0.7s; }
+    .card-bg img { width:100%; height:100%; object-fit:cover; display:block; filter:saturate(0.9) contrast(1.08) brightness(0.82); }
+    .portfolio-card:hover .card-bg { transform:scale(1.05); }
+    .card-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(8,8,8,0.97) 0%,rgba(8,8,8,0.12) 55%,transparent 100%); display:flex; flex-direction:column; justify-content:flex-end; padding:1.5rem; }
+    .card-category { font-size:0.58rem; letter-spacing:0.26em; text-transform:uppercase; color:var(--gold); margin-bottom:0.35rem; }
+    .card-title { font-family:'Cormorant Garamond',serif; font-size:1.28rem; font-weight:600; color:var(--cream); line-height:1.16; margin-bottom:0.3rem; }
+    .card-detail { font-size:0.68rem; color:var(--text-muted); line-height:1.5; }
+    .card-arrow { position:absolute; top:1rem; right:1rem; width:34px; height:34px; border:1px solid var(--border); border-radius:50%; display:flex; align-items:center; justify-content:center; background:rgba(8,8,8,0.6); opacity:0; transform:scale(0.8); transition:all 0.3s; font-size:0.8rem; }
+    .portfolio-card:hover .card-arrow { opacity:1; transform:scale(1); }
+
+    .pcard { position:relative; overflow:hidden; border-radius:4px; cursor:pointer; border:1px solid var(--border); transition:all 0.4s; transform-style:preserve-3d; aspect-ratio:4/3; }
+    .pcard.wide { grid-column:span 2; aspect-ratio:16/8; }
+    .pcard.tall { aspect-ratio:3/4; }
+    .pcard:hover { border-color:var(--gold); box-shadow:0 20px 60px rgba(0,0,0,0.5); }
+    .pcard-bg { position:absolute; inset:0; transition:transform 0.6s; }
+    .pcard:hover .pcard-bg { transform:scale(1.05); }
+    .pcard-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(8,8,8,0.97) 0%,rgba(8,8,8,0.15) 60%,transparent 100%); display:flex; flex-direction:column; justify-content:flex-end; padding:1.5rem; }
+    .pcard-cat { font-size:0.58rem; letter-spacing:0.25em; text-transform:uppercase; color:var(--gold); margin-bottom:0.4rem; }
+    .pcard-title { font-family:'Cormorant Garamond',serif; font-size:1.25rem; font-weight:600; color:var(--cream); line-height:1.2; margin-bottom:0.3rem; }
+    .pcard-detail { font-size:0.68rem; color:var(--text-muted); }
+    .pcard-badge { position:absolute; top:1rem; left:1rem; background:rgba(201,168,76,0.9); color:var(--deep-navy); font-size:0.58rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:0.25rem 0.6rem; border-radius:2px; }
+    .pcard-arrow { position:absolute; top:1rem; right:1rem; width:34px; height:34px; border:1px solid rgba(255,255,255,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center; background:rgba(8,8,8,0.6); opacity:0; transform:scale(0.8); transition:all 0.3s; font-size:0.8rem; }
+    .pcard:hover .pcard-arrow { opacity:1; transform:scale(1); }
+    .pcard-value { font-size:0.72rem; color:var(--gold-light); margin-top:0.3rem; }
+
+    /* SVG patterns for project cards */
+    .bg-navy-blue { background:linear-gradient(135deg,#1a2a3a,#0d2040); }
+    .bg-navy-green { background:linear-gradient(135deg,#1e2a20,#0d1f15); }
+    .bg-navy-red { background:linear-gradient(135deg,#2a1a1a,#1f0d0d); }
+    .bg-navy-dark { background:linear-gradient(135deg,#1a1e2a,#0f1020); }
+    .bg-navy-amber { background:linear-gradient(135deg,#2a2010,#1f1508); }
+    .bg-navy-teal { background:linear-gradient(135deg,#102a2a,#081f1f); }
+    .bg-navy-purple { background:linear-gradient(135deg,#1a1030,#100a20); }
+    .bg-navy-rose { background:linear-gradient(135deg,#2a1020,#1f0a15); }
+    .bg-navy-olive { background:linear-gradient(135deg,#1a2010,#101508); }
+
+    .project-svg { position:absolute;inset:0;width:100%;height:100%;opacity:0.3; }
+
+    /* project stats row */
+    .project-stats { display:grid; grid-template-columns:repeat(4,1fr); gap:1rem; margin:3rem 0; padding:2rem; border:1px solid var(--border); border-radius:4px; background:var(--charcoal); }
+    .ps-item { text-align:center; }
+    .ps-num { font-family:'Cinzel',serif; font-size:1.8rem; font-weight:700; color:var(--gold); }
+    .ps-label { font-size:0.62rem; letter-spacing:0.15em; text-transform:uppercase; color:var(--text-muted); margin-top:0.25rem; }
+
+    .section-tag { display:inline-flex; align-items:center; gap:0.5rem; margin:3rem 0 1rem; }
+    .section-tag-line { height:1px; width:30px; background:var(--gold); }
+    .section-tag-text { font-family:'Cinzel',serif; font-size:0.78rem; color:var(--gold); letter-spacing:0.1em; text-transform:uppercase; }
+
+    @media(max-width:1024px){.portfolio-grid{grid-template-columns:1fr 1fr}.portfolio-card.c-wide{grid-column:span 2}}
+    @media(max-width:768px){.portfolio-grid{grid-template-columns:1fr}.portfolio-card.c-wide{grid-column:span 1;aspect-ratio:16/9}.project-stats{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <main>
+  <!-- ─── PAGE HERO ─── -->
+  <section class="page-hero">
+    <div class="page-hero-eyebrow">Featured Projects · Nagpur · Umred · Vidarbha</div>
+    <h1 class="page-hero-title">Our Portfolio</h1>
+    <p class="page-hero-desc">From MTDC hospitality works to government buildings, parks, land development, and civil infrastructure in Umred and Nagpur — every project reflects trusted execution on the ground.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Portfolio</span>
+    </nav>
+  </section>
+
+  <!-- ─── STATS ROW ─── -->
+  <div class="stats-bar">
+    <div class="stats-grid">
+      <div class="stat-card reveal"><div class="stat-num"><span data-count="180">0</span><span class="stat-suffix">+</span></div><div class="stat-label">Projects Delivered</div></div>
+      <div class="stat-card reveal reveal-delay-1"><div class="stat-num">₹<span data-count="120">0</span><span class="stat-suffix">Cr+</span></div><div class="stat-label">Project Value</div></div>
+      <div class="stat-card reveal reveal-delay-2"><div class="stat-num"><span data-count="32">0</span><span class="stat-suffix">+</span></div><div class="stat-label">Govt. Contracts</div></div>
+      <div class="stat-card reveal reveal-delay-3"><div class="stat-num"><span data-count="5">0</span><span class="stat-suffix">+</span></div><div class="stat-label">Lakh Sq. Ft. Built</div></div>
+    </div>
+  </div>
+
+  <!-- ─── PORTFOLIO GRID ─── -->
+  <section style="background:var(--deep-navy);padding:5rem 5%" aria-labelledby="portfolio-heading">
+    <div style="max-width:1200px;margin:0 auto">
+
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem">
+        <div>
+          <div class="section-eyebrow reveal"><div class="eyebrow-line"></div><span class="eyebrow-text">Featured Projects — Nagpur &amp; Vidarbha</span></div>
+          <h2 class="section-title reveal reveal-delay-1" id="portfolio-heading">Landmarks We've <em>Built</em></h2>
+        </div>
+        <div class="filter-bar reveal reveal-delay-1">
+          <button class="filter-btn active" onclick="filterCards('all',this)">All</button>
+          <button class="filter-btn" onclick="filterCards('building',this)">Buildings</button>
+          <button class="filter-btn" onclick="filterCards('park',this)">Parks &amp; Gardens</button>
+          <button class="filter-btn" onclick="filterCards('infrastructure',this)">Infrastructure</button>
+        </div>
+      </div>
+
+      <div class="portfolio-grid" id="portfolio-grid">
+        <div class="portfolio-card tilt-card c-wide reveal" data-cat="building">
+          <div class="card-bg" style="height:100%;background:#0d1508">
+            <img src="assets/Pics/01kcy1adxay159dhtba2d727ve-2.jpg" alt="MTDC Moharli Tadoba construction by Shri Gurukrupa Builders" loading="lazy" decoding="async">
+          </div>
+          <div class="card-overlay"><div class="card-category">Building · MTDC · Tadoba</div><div class="card-title">MTDC Moharli — Tadoba</div><div class="card-detail">Construction &amp; All Works · Maharashtra Tourism</div></div><div class="card-arrow">↗</div>
+        </div>
+        <div class="portfolio-card tilt-card c-tall reveal reveal-delay-1" data-cat="building">
+          <div class="card-bg" style="height:100%;background:#0d1008"><img src="assets/Pics/artboard-1.jpg" alt="Tuli Suites Sakoli Nagzira construction" loading="lazy" decoding="async"></div>
+          <div class="card-overlay"><div class="card-category">Building · Sakoli, Nagzira</div><div class="card-title">Tuli Suites</div><div class="card-detail">Construction &amp; All Works</div></div><div class="card-arrow">↗</div>
+        </div>
+        <div class="portfolio-card tilt-card c-tall reveal reveal-delay-2" data-cat="building">
+          <div class="card-bg" style="height:100%;background:#100d08"><img src="assets/Pics/mtdc-ambhora.jpg" alt="MTDC Ambhora building construction" loading="lazy" decoding="async"></div>
+          <div class="card-overlay"><div class="card-category">Building · MTDC · Ambhora</div><div class="card-title">MTDC Ambhora</div><div class="card-detail">Building Construction</div></div><div class="card-arrow">↗</div>
+        </div>
+        <div class="portfolio-card tilt-card c-wide reveal" data-cat="building">
+          <div class="card-bg" style="height:100%;background:#0a100d"><img src="assets/Pics/mtdc-marshes-ghats-resorts.jpg" alt="MTDC Marshes Ghats Resorts renovation" loading="lazy" decoding="async"></div>
+          <div class="card-overlay"><div class="card-category">Building · MTDC · Renovation</div><div class="card-title">MTDC Marshes Ghats Resorts</div><div class="card-detail">Renovation Works · Maharashtra Tourism</div></div><div class="card-arrow">↗</div>
+        </div>
+        <div class="portfolio-card tilt-card c-sq reveal" data-cat="building">
+          <div class="card-bg" style="height:100%;background:#0d0e10"><img src="assets/Pics/mtdc-nagpur-mtdc-hotels-1.jpeg" alt="MTDC TRC Nagpur renovation" loading="lazy" decoding="async"></div>
+          <div class="card-overlay"><div class="card-category">Building · MTDC · Nagpur</div><div class="card-title">MTDC TRC Nagpur</div><div class="card-detail">Renovation Works</div></div><div class="card-arrow">↗</div>
+        </div>
+        <div class="portfolio-card tilt-card c-sq reveal reveal-delay-1" data-cat="building">
+          <div class="card-bg" style="height:100%;background:#12100a"><img src="assets/Pics/shopping-complex.avif" alt="Shopping Complex Malak Chawl construction by Shri Gurukrupa Builders" loading="lazy" decoding="async"></div>
+          <div class="card-overlay"><div class="card-category">Building · Commercial · Nagpur</div><div class="card-title">Shopping Complex — Malak Chawl</div><div class="card-detail">Construction &amp; All Works</div></div><div class="card-arrow">↗</div>
+        </div>
+        <div class="portfolio-card tilt-card c-sq reveal reveal-delay-2" data-cat="building">
+          <div class="card-bg" style="height:100%;background:#120a08"><img src="assets/Pics/umred-fire-station.jpg" alt="Umred Fire Station construction by Shri Gurukrupa Builders" loading="lazy" decoding="async"></div>
+          <div class="card-overlay"><div class="card-category">Building · Government · Umred</div><div class="card-title">Umred Fire Station</div><div class="card-detail">Construction &amp; All Works</div></div><div class="card-arrow">↗</div>
+        </div>
+        <div class="portfolio-card tilt-card c-wide reveal" data-cat="infrastructure">
+          <div class="card-bg" style="height:100%;background:#080d0a"><img src="assets/Pics/balaji-town-phase-2-umred-nagpur-balaji-land-developers.avif" alt="Land Development Umred Nagpur" loading="lazy" decoding="async"></div>
+          <div class="card-overlay"><div class="card-category">Infrastructure · Umred, Nagpur</div><div class="card-title">Land Development — Umred</div><div class="card-detail">Balaji Town Phase 2 · Site Development</div></div><div class="card-arrow">↗</div>
+        </div>
+        <div class="portfolio-card tilt-card c-tall reveal reveal-delay-1" data-cat="park">
+          <div class="card-bg" style="height:100%;background:#081008"><img src="assets/Pics/wcl-umred-central-park.jpeg" alt="WCL Umred Central Park construction" loading="lazy" decoding="async"></div>
+          <div class="card-overlay"><div class="card-category">Park · WCL · Umred</div><div class="card-title">WCL Umred Central Park</div><div class="card-detail">Park Development Works</div></div><div class="card-arrow">↗</div>
+        </div>
+        <div class="portfolio-card tilt-card c-tall reveal reveal-delay-2" data-cat="park">
+          <div class="card-bg" style="height:100%;background:#081008"><img src="assets/Pics/atal-bihari-vajpayee-umred-udyan.webp" alt="Atal Bihari Vajpayee Umred Udyan" loading="lazy" decoding="async"></div>
+          <div class="card-overlay"><div class="card-category">Park · Nagar Parishad · Umred</div><div class="card-title">Atal Bihari Vajpayee Umred Udyan</div><div class="card-detail">Bharat Ratna · Garden Development</div></div><div class="card-arrow">↗</div>
+        </div>
+        <div class="portfolio-card tilt-card c-sq reveal" data-cat="building">
+          <div class="card-bg" style="height:100%;background:#0d1018"><img src="assets/Pics/wcl-umred-quarters.jpg" alt="WCL Umred Quarters renovation by Shri Gurukrupa Builders" loading="lazy" decoding="async"></div>
+          <div class="card-overlay"><div class="card-category">Building · WCL · Umred</div><div class="card-title">WCL Umred Quarters</div><div class="card-detail">Renovation Works</div></div><div class="card-arrow">↗</div>
+        </div>
+        <div class="portfolio-card tilt-card c-sq reveal reveal-delay-1" data-cat="infrastructure">
+          <div class="card-bg" style="height:100%;background:#080d12"><img src="assets/Pics/sewage-treatment-plant.jpg" alt="Sewage Treatment Plant Umred construction by Shri Gurukrupa Builders" loading="lazy" decoding="async"></div>
+          <div class="card-overlay"><div class="card-category">Infrastructure · Civil · Umred</div><div class="card-title">Sewage Treatment Plant</div><div class="card-detail">Civil Works · Umred, Nagpur</div></div><div class="card-arrow">↗</div>
+        </div>
+      </div>
+
+      <!-- VIEW ALL CTA -->
+      <div style="text-align:center;margin-top:3rem" class="reveal">
+        <p style="color:var(--text-muted);font-size:0.85rem;margin-bottom:1.5rem">Showing the same 12 featured projects as the home page.</p>
+        <a href="contact.html" class="btn-primary"><span>Discuss Your Project</span><span>→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ─── -->
+  <section style="background:var(--navy-mid);padding:5rem 5%;text-align:center">
+    <h2 class="section-title reveal" style="text-align:center">Want Us to Build <em>Your Vision?</em></h2>
+    <p class="section-subtitle reveal reveal-delay-1" style="text-align:center;margin:1rem auto 2rem">Government tender in Maharashtra? Residential township in Nagpur? Infrastructure across Umred and Vidarbha?</p>
+    <div class="reveal reveal-delay-2" style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap">
+      <a href="contact.html" class="btn-primary"><span>Start a Project</span><span>→</span></a>
+      <a href="about.html" class="btn-outline">About the Company</a>
+    </div>
+  </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    initPage('portfolio');
+    function filterCards(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('.portfolio-card').forEach(c => {
+        const show = cat === 'all' || c.dataset.cat === cat;
+        c.classList.toggle('pf-hidden', !show);
+      });
+    }
+  </script>
+</body>
+</html>

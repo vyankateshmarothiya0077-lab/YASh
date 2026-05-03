@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en" data-root="">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog &amp; Insights | Construction &amp; Real Estate News Nagpur – Shri Gurukrupa Builders</title>
+  <meta name="description" content="Latest insights on construction, real estate, government contracts, and infrastructure development in Nagpur, Umred & Vidarbha with practical tips and market analysis." />
+  <meta name="keywords" content="construction news Nagpur, real estate Nagpur blog, builders blog Nagpur, infrastructure Vidarbha, Nagpur smart city, builders news Umred, construction tips Nagpur, government contracts Maharashtra" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.gurukrupabuilders.in/blog.html" />
+  <meta name="geo.region" content="IN-MH" />
+  <meta name="geo.placename" content="Nagpur, Maharashtra" />
+  <meta property="og:title" content="Blog &amp; Insights | Shri Gurukrupa Builders Nagpur" />
+  <meta property="og:description" content="Construction, real estate and infrastructure insights — practical guidance and current market trends from Nagpur." />
+  <meta property="og:url" content="https://www.gurukrupabuilders.in/blog.html" />
+  <meta property="og:type" content="website" />
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Blog",
+    "name":"Shri Gurukrupa Builders — Insights & News",
+    "url":"https://www.gurukrupabuilders.in/blog.html",
+    "description":"Construction, real estate and infrastructure insights with practical tips and regional market analysis.",
+    "publisher":{"@type":"Organization","name":"Shri Gurukrupa Builders","url":"https://www.gurukrupabuilders.in/"},
+    "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.gurukrupabuilders.in/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://www.gurukrupabuilders.in/blog.html"}]}
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/main.css?v=2" />
+  <style>
+    .blog-layout { display:grid; grid-template-columns:1fr 320px; gap:3rem; max-width:1200px; margin:0 auto; }
+    .blog-main { display:flex; flex-direction:column; gap:0; }
+
+    /* Featured post */
+    .blog-featured { border:1px solid var(--border); border-radius:4px; overflow:hidden; background:var(--charcoal); margin-bottom:2rem; transition:all 0.3s; cursor:pointer; }
+    .blog-featured:hover { border-color:rgba(201,168,76,0.5); transform:translateY(-3px); box-shadow:0 16px 40px rgba(0,0,0,0.3); }
+    .blog-featured-img { aspect-ratio:16/7; position:relative; overflow:hidden; }
+    .blog-featured-img-bg { width:100%; height:100%; background:linear-gradient(135deg,#1a3a5a,#0a1520); transition:transform 0.5s; }
+    .blog-featured:hover .blog-featured-img-bg { transform:scale(1.04); }
+    .blog-featured-tag { position:absolute; top:1.5rem; left:1.5rem; background:var(--gold); color:var(--deep-navy); font-size:0.62rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; padding:0.35rem 0.8rem; border-radius:2px; }
+    .blog-featured-badge { position:absolute; top:1.5rem; right:1.5rem; background:rgba(8,8,8,0.8); border:1px solid var(--border); color:var(--gold-light); font-size:0.6rem; letter-spacing:0.12em; text-transform:uppercase; padding:0.3rem 0.75rem; border-radius:100px; backdrop-filter:blur(8px); }
+    .blog-featured-body { padding:2rem; }
+    .blog-featured-meta { display:flex; gap:1rem; align-items:center; margin-bottom:0.75rem; }
+    .blog-featured-date { font-size:0.72rem; color:var(--text-muted); }
+    .blog-featured-read { font-size:0.72rem; color:var(--text-muted); }
+    .blog-featured-title { font-family:'Cormorant Garamond',serif; font-size:1.8rem; font-weight:600; color:var(--cream); line-height:1.2; margin-bottom:0.75rem; }
+    .blog-featured-excerpt { font-size:0.88rem; color:var(--text-muted); line-height:1.75; margin-bottom:1.5rem; }
+    .blog-featured-author { display:flex; align-items:center; gap:0.75rem; }
+    .author-avatar { width:36px; height:36px; border-radius:50%; background:linear-gradient(135deg,var(--gold),#8a5e1a); display:flex; align-items:center; justify-content:center; font-size:0.85rem; font-weight:700; color:var(--deep-navy); font-family:'Cinzel',serif; flex-shrink:0; }
+    .author-name { font-size:0.78rem; color:var(--cream); font-weight:500; }
+    .author-role { font-size:0.65rem; color:var(--text-muted); }
+
+    /* Blog list */
+    .blog-list { display:flex; flex-direction:column; gap:1.25rem; }
+    .blog-list-card { display:grid; grid-template-columns:200px 1fr; gap:1.5rem; border:1px solid var(--border); border-radius:4px; overflow:hidden; background:var(--charcoal); transition:all 0.3s; cursor:pointer; text-decoration:none; }
+    .blog-list-card:hover { border-color:rgba(201,168,76,0.5); transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.25); }
+    .blog-list-img { position:relative; overflow:hidden; }
+    .blog-list-img-bg { width:100%; height:100%; min-height:140px; transition:transform 0.5s; }
+    .blog-list-card:hover .blog-list-img-bg { transform:scale(1.06); }
+    .blog-list-tag { position:absolute; bottom:0.75rem; left:0.75rem; background:var(--gold); color:var(--deep-navy); font-size:0.55rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:0.25rem 0.55rem; border-radius:2px; }
+    .blog-list-body { padding:1.25rem 1.25rem 1.25rem 0; display:flex; flex-direction:column; justify-content:center; }
+    .blog-list-meta { display:flex; gap:0.75rem; margin-bottom:0.5rem; }
+    .blog-list-date,.blog-list-read { font-size:0.65rem; color:var(--text-muted); }
+    .blog-list-title { font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-weight:600; color:var(--cream); line-height:1.3; margin-bottom:0.5rem; }
+    .blog-list-excerpt { font-size:0.75rem; color:var(--text-muted); line-height:1.6; margin-bottom:0.75rem; }
+    .blog-list-link { font-size:0.68rem; color:var(--gold); letter-spacing:0.1em; text-transform:uppercase; display:inline-flex; align-items:center; gap:0.4rem; font-weight:500; transition:gap 0.3s; }
+    .blog-list-card:hover .blog-list-link { gap:0.65rem; }
+
+    /* Sidebar */
+    .blog-sidebar { display:flex; flex-direction:column; gap:1.5rem; position:sticky; top:6rem; align-self:start; }
+    .sidebar-block { border:1px solid var(--border); border-radius:4px; padding:1.5rem; background:var(--charcoal); }
+    .sidebar-title { font-family:'Cinzel',serif; font-size:0.75rem; color:var(--gold); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:1.25rem; padding-bottom:0.75rem; border-bottom:1px solid var(--border); }
+    .category-list { display:flex; flex-direction:column; gap:0.5rem; }
+    .cat-item { display:flex; justify-content:space-between; align-items:center; padding:0.5rem 0; border-bottom:1px solid rgba(201,168,76,0.07); cursor:pointer; transition:color 0.3s; text-decoration:none; }
+    .cat-item:last-child { border-bottom:none; }
+    .cat-item:hover .cat-name { color:var(--gold); }
+    .cat-name { font-size:0.8rem; color:var(--text-muted); transition:color 0.3s; }
+    .cat-count { font-size:0.65rem; color:var(--gold); background:rgba(201,168,76,0.1); padding:0.2rem 0.5rem; border-radius:100px; }
+    .recent-post { display:flex; gap:0.75rem; padding:0.75rem 0; border-bottom:1px solid rgba(201,168,76,0.07); cursor:pointer; text-decoration:none; }
+    .recent-post:last-child { border-bottom:none; }
+    .recent-thumb { width:60px; height:50px; border-radius:2px; flex-shrink:0; }
+    .recent-info .recent-title { font-size:0.75rem; color:var(--cream); line-height:1.3; margin-bottom:0.3rem; transition:color 0.3s; }
+    .recent-post:hover .recent-title { color:var(--gold); }
+    .recent-info .recent-date { font-size:0.62rem; color:var(--text-muted); }
+    .tag-cloud { display:flex; flex-wrap:wrap; gap:0.5rem; }
+    .tag { font-size:0.65rem; letter-spacing:0.08em; color:var(--text-muted); border:1px solid var(--border); padding:0.3rem 0.7rem; border-radius:100px; cursor:pointer; transition:all 0.3s; text-decoration:none; }
+    .tag:hover { border-color:var(--gold); color:var(--gold); background:rgba(201,168,76,0.06); }
+
+    .filter-bar-blog { display:flex; gap:0.5rem; flex-wrap:wrap; margin-bottom:1.5rem; }
+    .filter-btn { padding:0.5rem 1.25rem; border:1px solid var(--border); background:transparent; color:var(--text-muted); font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; border-radius:100px; cursor:pointer; transition:all 0.3s; font-family:inherit; }
+    .filter-btn.active, .filter-btn:hover { border-color:var(--gold); color:var(--gold); background:rgba(201,168,76,0.08); }
+
+    @media(max-width:1024px){.blog-layout{grid-template-columns:1fr}.blog-sidebar{position:static}}
+    @media(max-width:768px){.blog-list-card{grid-template-columns:1fr}.blog-list-img{min-height:180px}.blog-list-body{padding:1.25rem}.blog-featured-title{font-size:1.4rem}.blog-featured-body{padding:1.5rem}}
+  </style>
+</head>
+<body>
+  <main>
+  <section class="page-hero">
+    <div class="page-hero-eyebrow">Construction · Real Estate · Vidarbha Infrastructure</div>
+    <h1 class="page-hero-title">From the Ground Up</h1>
+    <p class="page-hero-desc">Expert insights on construction, government infrastructure, real estate, and sustainable building — focused on practical guidance and current market trends.</p>
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="breadcrumb-sep">›</span><span>Blog &amp; Insights</span>
+    </nav>
+  </section>
+
+  <div class="marquee-strip" aria-hidden="true">
+    <div class="marquee-track">
+      <div class="marquee-item">Nagpur Construction News <span class="marquee-dot"></span></div><div class="marquee-item">Real Estate Nagpur 2026 <span class="marquee-dot"></span></div><div class="marquee-item">Vidarbha Infrastructure <span class="marquee-dot"></span></div><div class="marquee-item">Government Contracts Maharashtra <span class="marquee-dot"></span></div><div class="marquee-item">Smart City Nagpur <span class="marquee-dot"></span></div><div class="marquee-item">Sustainable Building <span class="marquee-dot"></span></div>
+      <div class="marquee-item">Nagpur Construction News <span class="marquee-dot"></span></div><div class="marquee-item">Real Estate Nagpur 2026 <span class="marquee-dot"></span></div><div class="marquee-item">Vidarbha Infrastructure <span class="marquee-dot"></span></div><div class="marquee-item">Government Contracts Maharashtra <span class="marquee-dot"></span></div><div class="marquee-item">Smart City Nagpur <span class="marquee-dot"></span></div><div class="marquee-item">Sustainable Building <span class="marquee-dot"></span></div>
+    </div>
+  </div>
+
+  <section style="background:var(--navy);padding:5rem 5%">
+    <div style="max-width:1200px;margin:0 auto 2.5rem">
+      <div class="section-eyebrow reveal"><div class="eyebrow-line"></div><span class="eyebrow-text">Latest Articles</span></div>
+      <div style="display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;gap:1rem">
+        <h2 class="section-title reveal reveal-delay-1">Expert <em>Insights</em></h2>
+        <div class="filter-bar-blog reveal reveal-delay-1">
+          <button class="filter-btn active" onclick="filterBlog('all',this)">All</button>
+          <button class="filter-btn" onclick="filterBlog('infra',this)">Infrastructure</button>
+          <button class="filter-btn" onclick="filterBlog('rural',this)">Rural Dev.</button>
+          <button class="filter-btn" onclick="filterBlog('sustainability',this)">Sustainability</button>
+          <button class="filter-btn" onclick="filterBlog('realestate',this)">Real Estate</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-layout">
+      <!-- MAIN COLUMN -->
+      <div class="blog-main">
+        <!-- Featured -->
+        <a href="blog/nagpur-smart-city-infrastructure.html" class="blog-featured reveal" style="text-decoration:none" data-blogcat="infra">
+          <div class="blog-featured-img">
+            <div class="blog-featured-img-bg">
+              <svg width="100%" height="100%" viewBox="0 0 800 300" xmlns="http://www.w3.org/2000/svg" style="opacity:0.35"><g stroke="#C9A84C" stroke-width="0.5" fill="none"><rect x="30" y="40" width="100" height="240"/><rect x="150" y="10" width="150" height="270"/><rect x="320" y="60" width="120" height="220"/><rect x="460" y="20" width="180" height="260"/><rect x="660" y="80" width="110" height="200"/><line x1="0" y1="280" x2="800" y2="280"/><line x1="0" y1="285" x2="800" y2="285"/></g></svg>
+            </div>
+            <div class="blog-featured-tag">Infrastructure</div>
+            <div class="blog-featured-badge">Featured</div>
+          </div>
+          <div class="blog-featured-body">
+            <div class="blog-featured-meta">
+              <span class="blog-featured-date">12 April 2026</span>
+              <span style="color:var(--border)">·</span>
+              <span class="blog-featured-read">5 min read</span>
+              <span style="color:var(--border)">·</span>
+              <span style="font-size:0.72rem;color:var(--text-muted)">Nagpur Smart City</span>
+            </div>
+            <h2 class="blog-featured-title">Nagpur's Smart City Vision: How Urban Infrastructure Is Reshaping the Orange City in 2026</h2>
+            <p class="blog-featured-excerpt">With ₹4,000 crore in Smart City Mission funds flowing into Nagpur and new metro expansion underway, this analysis reviews projects redefining mobility, green spaces, and civic amenities — and what they mean for residents, contractors, and investors.</p>
+            <div class="blog-featured-author">
+              <div class="author-avatar">P</div>
+              <div><div class="author-name">Er. Prashant Agarwal</div><div class="author-role">MD, Shri Gurukrupa Builders · Nagpur</div></div>
+              <span class="blog-list-link" style="margin-left:auto">Read Article <span>→</span></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Blog list -->
+        <div class="blog-list">
+          <a href="blog/rural-vidarbha-phc-network.html" class="blog-list-card reveal" style="color:inherit" data-blogcat="rural">
+            <div class="blog-list-img"><div class="blog-list-img-bg" style="background:linear-gradient(135deg,#3a2010,#1f0f08)"><svg width="100%" height="100%" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" style="opacity:0.4"><g stroke="#C9A84C" stroke-width="0.6" fill="none"><rect x="20" y="30" width="160" height="110"/><line x1="20" y1="80" x2="180" y2="80"/><rect x="30" y="40" width="35" height="30" rx="1"/><rect x="135" y="40" width="35" height="30" rx="1"/><rect x="80" y="85" width="40" height="55"/><line x1="95" y1="105" x2="105" y2="105" stroke-width="2"/><line x1="100" y1="100" x2="100" y2="110" stroke-width="2"/></g></svg></div><div class="blog-list-tag">Rural Dev.</div></div>
+            <div class="blog-list-body">
+              <div class="blog-list-meta"><span class="blog-list-date">28 March 2026</span><span style="color:var(--border)">·</span><span class="blog-list-read">7 min read</span></div>
+              <div class="blog-list-title">Bridging Rural Vidarbha: Lessons from a 12-PHC Government Package Across Umred &amp; Hinganghat</div>
+              <div class="blog-list-excerpt">A practical breakdown of delivery strategy, on-ground constraints, and execution methods behind a large rural health infrastructure package in Maharashtra.</div>
+              <span class="blog-list-link">Read Article <span>→</span></span>
+            </div>
+          </a>
+
+          <a href="blog/green-construction-nagpur.html" class="blog-list-card reveal reveal-delay-1" style="color:inherit" data-blogcat="sustainability">
+            <div class="blog-list-img"><div class="blog-list-img-bg" style="background:linear-gradient(135deg,#1a3a1a,#0a2010)"><svg width="100%" height="100%" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" style="opacity:0.4"><g stroke="#C9A84C" stroke-width="0.6" fill="none"><rect x="40" y="50" width="120" height="90"/><rect x="50" y="30" width="100" height="20"/><rect x="55" y="60" width="25" height="30" rx="1"/><rect x="120" y="60" width="25" height="30" rx="1"/><circle cx="40" cy="90" r="20" fill="rgba(201,168,76,0.1)"/><circle cx="160" cy="85" r="15" fill="rgba(201,168,76,0.1)"/><line x1="55" y1="140" x2="145" y2="140"/></g></svg></div><div class="blog-list-tag">Sustainability</div></div>
+            <div class="blog-list-body">
+              <div class="blog-list-meta"><span class="blog-list-date">10 March 2026</span><span style="color:var(--border)">·</span><span class="blog-list-read">4 min read</span></div>
+              <div class="blog-list-title">Green Construction in Nagpur: Practical Climate-Ready Building Approaches</div>
+              <div class="blog-list-excerpt">Solar, rainwater harvesting, fly-ash bricks, and IGBC-aligned practices — what works in Nagpur and Vidarbha without compromising quality or project economics.</div>
+              <span class="blog-list-link">Read Article <span>→</span></span>
+            </div>
+          </a>
+
+          <a href="blog/nagpur-smart-city-infrastructure.html" class="blog-list-card reveal reveal-delay-2" style="color:inherit" data-blogcat="realestate">
+            <div class="blog-list-img"><div class="blog-list-img-bg" style="background:linear-gradient(135deg,#1a1e3a,#0f1020)"><svg width="100%" height="100%" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" style="opacity:0.4"><g stroke="#C9A84C" stroke-width="0.6" fill="none"><line x1="20" y1="130" x2="180" y2="130"/><line x1="40" y1="130" x2="40" y2="50"/><line x1="80" y1="130" x2="80" y2="60"/><line x1="120" y1="130" x2="120" y2="40"/><line x1="160" y1="130" x2="160" y2="30"/><polyline points="40,50 80,60 120,40 160,30" stroke-width="1.5"/><circle cx="40" cy="50" r="3" fill="#C9A84C"/><circle cx="80" cy="60" r="3" fill="#C9A84C"/><circle cx="120" cy="40" r="3" fill="#C9A84C"/><circle cx="160" cy="30" r="3" fill="#C9A84C"/></g></svg></div><div class="blog-list-tag">Real Estate</div></div>
+            <div class="blog-list-body">
+              <div class="blog-list-meta"><span class="blog-list-date">12 Apr 2026</span><span style="color:var(--border)">·</span><span class="blog-list-read">5 min read</span></div>
+              <div class="blog-list-title">How Smart City Funds Are Reshaping Wardha Road &amp; Hingna Property Corridors</div>
+              <div class="blog-list-excerpt">Metro rail expansion, the Outer Ring Road, and Smart City investments are redrawing Nagpur's high-growth real-estate micro-markets. Here's where appreciation is concentrating.</div>
+              <span class="blog-list-link">Read Article <span>→</span></span>
+            </div>
+          </a>
+
+          <a href="blog/green-construction-nagpur.html" class="blog-list-card reveal" style="color:inherit" data-blogcat="sustainability">
+            <div class="blog-list-img"><div class="blog-list-img-bg" style="background:linear-gradient(135deg,#2a1a10,#1a0f08)"><svg width="100%" height="100%" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" style="opacity:0.4"><g stroke="#C9A84C" stroke-width="0.6" fill="none"><rect x="30" y="20" width="140" height="110" rx="2"/><line x1="30" y1="50" x2="170" y2="50"/><rect x="45" y="62" width="110" height="6" rx="1"/><rect x="45" y="76" width="90" height="6" rx="1"/><rect x="45" y="90" width="100" height="6" rx="1"/><rect x="45" y="104" width="70" height="6" rx="1"/><circle cx="145" cy="35" r="8"/><line x1="141" y1="35" x2="149" y2="35"/><line x1="145" y1="31" x2="145" y2="39"/></g></svg></div><div class="blog-list-tag">Guide</div></div>
+            <div class="blog-list-body">
+              <div class="blog-list-meta"><span class="blog-list-date">10 Mar 2026</span><span style="color:var(--border)">·</span><span class="blog-list-read">4 min read</span></div>
+              <div class="blog-list-title">Six Practical Green Construction Priorities for Nagpur Builders</div>
+              <div class="blog-list-excerpt">Solar, rainwater harvesting, fly-ash bricks, passive cooling, and IGBC-aligned practices — a structured checklist for climate-ready building in Nagpur and Vidarbha.</div>
+              <span class="blog-list-link">Read Article <span>→</span></span>
+            </div>
+          </a>
+
+          <a href="blog/rural-vidarbha-phc-network.html" class="blog-list-card reveal reveal-delay-1" style="color:inherit" data-blogcat="infra">
+            <div class="blog-list-img"><div class="blog-list-img-bg" style="background:linear-gradient(135deg,#102030,#081520)"><svg width="100%" height="100%" viewBox="0 0 200 150" xmlns="http://www.w3.org/2000/svg" style="opacity:0.4"><g stroke="#C9A84C" stroke-width="0.6" fill="none"><line x1="0" y1="110" x2="200" y2="110"/><line x1="0" y1="120" x2="200" y2="120"/><rect x="20" y="70" width="15" height="40"/><rect x="90" y="50" width="15" height="60"/><rect x="170" y="70" width="15" height="40"/><line x1="27" y1="70" x2="97" y2="55"/><line x1="97" y1="55" x2="177" y2="70"/><line x1="97" y1="55" x2="0" y2="85"/><line x1="97" y1="55" x2="200" y2="85"/></g></svg></div><div class="blog-list-tag">Infrastructure</div></div>
+            <div class="blog-list-body">
+              <div class="blog-list-meta"><span class="blog-list-date">28 Mar 2026</span><span style="color:var(--border)">·</span><span class="blog-list-read">7 min read</span></div>
+              <div class="blog-list-title">Vidarbha's Rural Infrastructure Push: Connectivity Lessons from PHC Delivery</div>
+              <div class="blog-list-excerpt">A look at execution challenges, monsoon logistics, and contractor strategy behind a 12-PHC government package across Umred, Hinganghat, and surrounding talukas.</div>
+              <span class="blog-list-link">Read Article <span>→</span></span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- SIDEBAR -->
+      <aside class="blog-sidebar reveal reveal-delay-2">
+        <!-- Categories -->
+        <div class="sidebar-block">
+          <div class="sidebar-title">Categories</div>
+          <div class="category-list">
+            <a href="#" class="cat-item"><span class="cat-name">Infrastructure &amp; Roads</span><span class="cat-count">8</span></a>
+            <a href="#" class="cat-item"><span class="cat-name">Real Estate Nagpur</span><span class="cat-count">12</span></a>
+            <a href="#" class="cat-item"><span class="cat-name">Rural Development</span><span class="cat-count">6</span></a>
+            <a href="#" class="cat-item"><span class="cat-name">Government Contracts</span><span class="cat-count">5</span></a>
+            <a href="#" class="cat-item"><span class="cat-name">Sustainability</span><span class="cat-count">4</span></a>
+            <a href="#" class="cat-item"><span class="cat-name">Buyer's Guide</span><span class="cat-count">7</span></a>
+            <a href="#" class="cat-item"><span class="cat-name">Company News</span><span class="cat-count">9</span></a>
+          </div>
+        </div>
+
+        <!-- Recent -->
+        <div class="sidebar-block">
+          <div class="sidebar-title">Recent Articles</div>
+          <a href="blog/nagpur-smart-city-infrastructure.html" class="recent-post" style="text-decoration:none">
+            <div class="recent-thumb" style="background:linear-gradient(135deg,#1a3a5a,#0a1520)"></div>
+            <div class="recent-info"><div class="recent-title">Nagpur Smart City Vision 2026</div><div class="recent-date">12 Apr 2026</div></div>
+          </a>
+          <a href="blog/rural-vidarbha-phc-network.html" class="recent-post" style="text-decoration:none">
+            <div class="recent-thumb" style="background:linear-gradient(135deg,#3a2010,#1f0f08)"></div>
+            <div class="recent-info"><div class="recent-title">Bridging Rural Vidarbha: 12-PHC Contract</div><div class="recent-date">28 Mar 2026</div></div>
+          </a>
+          <a href="blog/green-construction-nagpur.html" class="recent-post" style="text-decoration:none">
+            <div class="recent-thumb" style="background:linear-gradient(135deg,#1a3a1a,#0a2010)"></div>
+            <div class="recent-info"><div class="recent-title">Green Construction in Nagpur</div><div class="recent-date">10 Mar 2026</div></div>
+          </a>
+        </div>
+
+        <!-- Tags -->
+        <div class="sidebar-block">
+          <div class="sidebar-title">Popular Tags</div>
+          <div class="tag-cloud">
+            <a href="#" class="tag">Nagpur</a><a href="#" class="tag">Builders Nagpur</a><a href="#" class="tag">Umred</a><a href="#" class="tag">Vidarbha</a><a href="#" class="tag">Smart City</a><a href="#" class="tag">RERA</a><a href="#" class="tag">PWD</a><a href="#" class="tag">Infrastructure</a><a href="#" class="tag">Maharashtra</a><a href="#" class="tag">Rural Dev.</a><a href="#" class="tag">Green Build</a><a href="#" class="tag">Real Estate</a><a href="#" class="tag">NMC</a><a href="#" class="tag">NHAI</a>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="sidebar-block" style="background:linear-gradient(135deg,rgba(201,168,76,0.08),rgba(201,168,76,0.03));border-color:rgba(201,168,76,0.3);text-align:center">
+          <div style="font-size:1.5rem;margin-bottom:0.75rem">🏗️</div>
+          <div style="font-family:'Cinzel',serif;font-size:0.82rem;color:var(--cream);margin-bottom:0.5rem">Have a Project in Nagpur?</div>
+          <div style="font-size:0.75rem;color:var(--text-muted);line-height:1.6;margin-bottom:1.25rem">Talk to Nagpur's most trusted builders. Government contracts, residential, infrastructure.</div>
+          <a href="contact.html" class="btn-primary" style="width:100%;justify-content:center;font-size:0.72rem;padding:0.7rem 1rem"><span>Enquire Now</span><span>→</span></a>
+        </div>
+      </aside>
+    </div>
+  </section>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    initPage('blog');
+    function filterBlog(cat, btn) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      document.querySelectorAll('[data-blogcat]').forEach(c => {
+        const show = cat === 'all' || c.dataset.blogcat === cat;
+        c.style.opacity = show ? '1' : '0.2';
+        c.style.pointerEvents = show ? 'auto' : 'none';
+        c.style.transition = 'all 0.4s ease';
+      });
+    }
+  </script>
+</body>
+</html>

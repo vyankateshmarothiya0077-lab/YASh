@@ -1,0 +1,19 @@
+# ═══════════════════════════════════════════════════════
+# robots.txt — Shri Gurukrupa Builders
+# Top Builders & Contractors in Nagpur, Umred & Vidarbha
+# https://www.gurukrupabuilders.in/
+# ═══════════════════════════════════════════════════════
+
+User-agent: *
+Allow: /
+
+# Disallow internal/utility paths if any are added later
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# ═══ SITEMAP ═══
+Sitemap: https://www.gurukrupabuilders.in/sitemap.xml
