@@ -97,7 +97,6 @@ function injectNav(activePage) {
       <li><a href="${root}index.html" ${activePage==='home'?'class="active"':''}>Home</a></li>
       <li><a href="${root}about.html" ${activePage==='about'?'class="active"':''}>About Us</a></li>
       <li><a href="${root}portfolio.html" ${activePage==='portfolio'?'class="active"':''}>Portfolio</a></li>
-      <li><a href="${root}blog.html" ${activePage==='blog'?'class="active"':''}>Insights</a></li>
       <li><a href="${root}contact.html" class="nav-cta">Enquire Now</a></li>
     </ul>
     <button class="nav-mobile-toggle" onclick="openMobileNav()" aria-label="Open menu">☰</button>
@@ -111,7 +110,6 @@ function injectNav(activePage) {
     <a href="${root}index.html" onclick="closeMobileNav()">Home</a>
     <a href="${root}about.html" onclick="closeMobileNav()">About Us</a>
     <a href="${root}portfolio.html" onclick="closeMobileNav()">Portfolio</a>
-    <a href="${root}blog.html" onclick="closeMobileNav()">Insights</a>
     <a href="${root}contact.html" onclick="closeMobileNav()">Enquire Now</a>
   `;
 
@@ -141,19 +139,18 @@ function injectFooter() {
         <ul>
           <li><a href="${root}about.html">About Us</a></li>
           <li><a href="${root}portfolio.html">Portfolio</a></li>
-          <li><a href="${root}blog.html">Blog &amp; Insights</a></li>
           <li><a href="${root}contact.html">Contact Us</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
         <ul>
-          <li><a href="#">Residential Projects</a></li>
-          <li><a href="#">Commercial Spaces</a></li>
-          <li><a href="#">Government Contracts</a></li>
-          <li><a href="#">Rural Infrastructure</a></li>
-          <li><a href="#">Roads &amp; Bridges</a></li>
-          <li><a href="#">Interior Design</a></li>
+          <li><a href="${root}contact.html">Residential Projects</a></li>
+          <li><a href="${root}contact.html">Commercial Spaces</a></li>
+          <li><a href="${root}contact.html">Government Contracts</a></li>
+          <li><a href="${root}contact.html">Rural Infrastructure</a></li>
+          <li><a href="${root}contact.html">Roads &amp; Bridges</a></li>
+          <li><a href="${root}contact.html">Interior Design</a></li>
         </ul>
       </div>
     </div>
